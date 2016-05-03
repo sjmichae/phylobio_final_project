@@ -20,7 +20,7 @@ Some guidelines and tips:
 
 OK, here we go.
 
-# Title of my project
+# Using Phylogeny to Understand Ion Channels
 
 ## Introduction and Goals
 
