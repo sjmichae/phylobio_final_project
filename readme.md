@@ -32,7 +32,11 @@ The methods I will use to do this are...
 The data I will use are (my own data/ data publicly available at YYY/ simulations)
 
 ## Methods
-This project consists of three repositories
+This project consists of two main branches. The first branch uses protein sequence data to look at magnesium ion channels in Homo sapiens. Protein data is superior to DNA and RNA data in this instance because the channels operate at the protein level. We do not need to think about the relative importance of coding and noncoding DNA regions. Moreover, amino acids convey information in fewer letters than their corresponding DNA codons and avoid dealing with the degeneracy of the DNA code.
+
+A second branch of the project uses morphological data to compare 
+The mantra of biology that structure determines function rings true.
+A shortcoming of protein data is that it only allows us to examine the primary structure of the ion channels
 
 
 The tools I used were... See analysis files at (links to analysis files).
