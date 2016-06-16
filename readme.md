@@ -20,17 +20,20 @@ Some guidelines and tips:
 
 OK, here we go.
 
-# Using Phylogeny to Understand Ion Channels
+# Using Phylogeny to Understand Magnesium Ion Channels
 
 ## Introduction and Goals
 
-The goal of my project is to answer the question, What is...?
+The goal of my project is to examine magnesium transport in the human body using phylogeny by comparing human magnesium ion channels to other ion channel families and to other methods of magnesium transport in eukaryotes and prokaryotes. A guiding question is thus whether human magnesium ion channels share greater homology with other human ion channels or other magnesium transport mechanisms.
+What is...?
 
 The methods I will use to do this are...
 
 The data I will use are (my own data/ data publicly available at YYY/ simulations)
 
 ## Methods
+This project consists of three repositories
+
 
 The tools I used were... See analysis files at (links to analysis files).
 
