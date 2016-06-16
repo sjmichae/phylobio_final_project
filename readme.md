@@ -34,10 +34,8 @@ The data I will use are (my own data/ data publicly available at YYY/ simulation
 ## Methods
 This project consists of two main branches. The first branch uses protein sequence data to look at magnesium ion channels in Homo sapiens. Protein data is superior to DNA and RNA data in this instance because the channels operate at the protein level. We do not need to think about the relative importance of coding and noncoding DNA regions. Moreover, amino acids convey information in fewer letters than their corresponding DNA codons and avoid dealing with the degeneracy of the DNA code.
 
-A second branch of the project uses morphological data as a proof of principle to analyze ion channel phylogeny. 
-The mantra of biology that structure determines function rings true.
-A shortcoming of protein data is that it only allows us to examine the primary structure of the ion channels
-
+A second branch of the project uses morphological data as a proof of principle to analyze ion channel phylogeny. Because of the precision and abundance of sequence data, it is the dominant method of phylogenetic analysis, especially when protein structures have not been fully resolved. Yet the mantra of biology that structure determines function rings true. A shortcoming of protein sequence data is that it only allows us to examine the primary structure of the ion channels--the order of amino acids. 
+Amino acid form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different amino acids may produce near-identical three-dimensional structure or a single residue substitution could contort the entire structure.
 
 The tools I used were... See analysis files at (links to analysis files).
 
