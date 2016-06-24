@@ -36,7 +36,7 @@ This project consists of two main branches. The first branch uses protein sequen
 
 I began with a series of accession numbers pertaining to protein sequences involved in magnesium trasnport -- both in humans and other organisms. I also include acession numbers pertaining to epithelial sodium channel family as a control and the ribosomal protein as an outgroup. Using a procedure similar to the hydroilina exercise, I used ProteinBlast to find the corresponding protein sequence.
 
-  sed -E 's/>.+\| ([a-zA-Z]+) ([a-zA-Z]+)[\. ].+/>\1_\2/g' mg.raw.fasta > mg.fasta
+    sed -E 's/>.+\| ([a-zA-Z]+) ([a-zA-Z]+)[\. ].+/>\1_\2/g' mg.raw.fasta > mg.fasta
 
 
 
