@@ -34,9 +34,8 @@ The data I will use are (my own data/ data publicly available at YYY/ simulation
 ## Methods
 This project consists of two main branches. The first branch uses protein sequence data to look at magnesium ion channels in Homo sapiens. Protein data is superior to DNA and RNA data in this instance because the channels operate at the protein level. We do not need to think about the relative importance of coding and noncoding DNA regions. Moreover, amino acids convey information in fewer letters than their corresponding DNA codons and avoid dealing with the degeneracy of the DNA code.
 
-I began with a series of accession numbers pertaining to protein sequences involved in magnesium trasnport -- both in humans and other organisms. I also include acession numbers pertaining to epithelial sodium channel family as a control and the ribosomal protein as an outgroup. Using a procedure similar to the hydroilina exercise, I used ProteinBlast to find the corresponding protein sequence.
+I began with a series of accession numbers pertaining to protein sequences involved in magnesium transport -- both in humans and other organisms. I also include acession numbers pertaining to epithelial sodium channel family as a control and the ribosomal protein as an outgroup. Using a procedure similar to the hydroilina exercise, I used ProteinBlast to find the corresponding protein sequence. I adjusted the resulting *.raw.fasta file to a *.fasta file by shortening the protein names by hand because many of the protein names were very similar and differed by only a single digit (as in the case of TRPM6 and TRPM7) or contained nonalphanumeric characters, namely parentheses and plus signs. The sed command was too blunt a tool to reformat the names, so it proved more efficient to do it manually.
 
-    sed -E 's/>.+\| ([a-zA-Z]+) ([a-zA-Z]+)[\. ].+/>\1_\2/g' mg.raw.fasta > mg.fasta
 
 
 
