@@ -36,6 +36,7 @@ This project consists of two main branches. The first branch uses protein sequen
 
 I began with a series of accession numbers pertaining to protein sequences involved in magnesium transport -- both in humans and other organisms. I also include acession numbers pertaining to epithelial sodium channel family as a control and the ribosomal protein as an outgroup. Using a procedure similar to the hydroilina exercise, I used ProteinBlast to find the corresponding protein sequence. I adjusted the resulting *.raw.fasta file to a *.fasta file by shortening the protein names by hand because many of the protein names were very similar and differed by only a single digit (as in the case of TRPM6 and TRPM7) or contained nonalphanumeric characters, namely parentheses and plus signs. The sed command was too blunt a tool to reformat the names, so it proved more efficient to do it manually.
 
+I then used an online tool [tool](http://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_nexus.php) to convert the *.fasta file *.nex
 
 
 
