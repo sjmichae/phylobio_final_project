@@ -38,7 +38,7 @@ I began with a series of accession numbers pertaining to protein sequences invol
 
 I then used an online [tool](http://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_nexus.php) and selected the protrein option to convert the *.fasta file *.nex file.
 
-All of the analyses were performed using RevBayes using slightly modified versions of existing RevBayes model.
+All of the analyses were performed using RevBayes using slightly modified versions of existing phylogenetic models. In my first analysis, I used the Jukes-Cantor program from the hydrolina project and modified the program so that it corresponded to amino acid data instead of nucleotide data and that there were 20 possible character states for the 20 amino acids. In the second analysis, I modified the program again using the Jones function to simulate the JTT model, which relies upon a matrix of probability of amino acids evolution based on a large sample of proteins.
 
 A second branch of the project uses morphological data as a proof of principle to analyze ion channel phylogeny. Because of the precision and abundance of sequence data, it is the dominant method of phylogenetic analysis, especially when protein structures have not been fully resolved. Yet the mantra of biology that structure determines function rings true. A shortcoming of protein sequence data is that it only allows us to examine the primary structure of the ion channels--the order of amino acids. 
 Amino acid form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different amino acids may produce near-identical three-dimensional structure or a single residue substitution could contort the entire structure.
@@ -54,8 +54,15 @@ The tree in Figure 1...
 
 These results indicate...
 
+It was surprising to find that the first two analyses resulted in broadly similar conclusions, having expected the modified Jukes-Cantor model to provide an unreliable tree.
+
+One of the continuing puzzles of phylogenetics involves differentiating between convergent and homologous evolution as well as horizontal evolution.
+MRS2, a human mitocondrial magnesium transporter is closely related to CorA, a bacterial magnesium transporter, as indicated by the JTT model tree and other research papers. CorA and MRS2 are considered to be homologous proteins.
+
 The biggest difficulty in implementing these analyses was...
 A major difficulty in completing the project was my limited understanding of programming. In my project, I sought to do what I thought of as an interesting application of phylogentics and the topics we have discussed without thinking too much about feasibility of the computer model or my own limited proficiency in the area. This manifested itself in several challenges in implementing the programming aspect of the project. The project took me much longer than expected to complete. I ran into several hiccups in terms of syntax and execution. For example, there seemed to be a problem with loading my .nex file into the RevBayes program. I initially thought there was a syntax error in the command to input the discrete character data or that it had not been properly formatted for protein data. It turned out that the .nex file converted in Mesquite was noncompatable with RevBayes. By using an online .fasta to .nex conversion [tool](http://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_nexus.php) instead, I was able to create a compatable .nex file.
+
+
 
 Another complication was that OSCAR couldn't process my analyses, requiring me to use my laptop computer instead. When I initially tried to run the JTT model analysis on OSCAR, the system initiated an error message that the program took up too much computing power. I subsequently reduced the number of iterations, which allowed the program to fully load and begin running, but the program paused midway through the run with the same error message. I therfore ran the program on my own machine, which ran slowly but with no error messages.
 
