@@ -20,7 +20,7 @@ Some guidelines and tips:
 
 OK, here we go.
 
-# Using Phylogeny to Understand Magnesium Ion Channels
+# Comparing Morphological and Protein Sequence Models of Ion Channel Phylogeny
 
 ## Introduction and Goals
 
