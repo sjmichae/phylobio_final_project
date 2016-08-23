@@ -1,120 +1,75 @@
-# siphonophore16s
+# Phylogenetic Biology - Final Project
 
-This exercise is an introduction to:
+## Guidelines - you can delete this section before submission
 
-- git and github
-- running a raxml analysis
-- using Brown's [Oscar Cluster](https://web1.ccv.brown.edu/doc/getting-started.html)
+This repository is a stub for your final project. Fork it, develop your project, and submit it as a pull request. Edit/ delete the text in this readme as needed.
 
+Some guidelines and tips:
 
-## Steps
+- Use the stubs below to write up your final project. Alternatively, if you would like the writeup to be an executable document (with [knitr](http://yihui.name/knitr/), [jupytr](http://jupyter.org/), or other tools), you can create it as a separate file and put a link to it here in the readme.
 
-### Forking the repository on github
+- For information on formatting text files with markdown, see https://guides.github.com/features/mastering-markdown/ . You can use markdown to include images in this document by linking to files in the repository, eg `![GitHub Logo](/images/logo.png)`.
 
-Browse to the GitHub repository for this exercise. If you are reading this at GitHub, you are already [there](https://github.com/Phylogenetics-Brown-BIOL1425/siphonophore16s).
+- The project must be entirely reproducible. In addition to the results, the repository must include all the data (or links to data) and code needed to reproduce the results.
 
-Click the "Fork" button on the top right of the page. This creates your own independent copy of the repository to work with, so we can all make changes without affecting other peoples' analyses. It also takes you to the web page for the new repository. The url will be something like:
+- If you are working with unpublished data that you would prefer not to publicly share at this time, please contact me to discuss options. In most cases, the data can be anonymized in a way that putting them in a public repo does not compromise your other goals.
 
-    https://github.com/github_username/siphonophore16s
+- Paste references (including urls) into the reference section, and cite them with the general format (Smith at al. 2003).
 
-where `github_username` is your github username.
+- Commit and push often as you work.
 
-### Running the analyses on oscar
+OK, here we go.
 
-Open the terminal on your computer, and log into Oscar with:
+# Using Phylogeny to Understand Magnesium Ion Channels
 
-    ssh oscar_username@ssh.ccv.brown.edu
+## Introduction and Goals
 
-where `oscar_username` is your oscar username.
+The goal of my project is to examine magnesium transport in the human body using phylogeny by comparing human magnesium ion channels to other ion channel families and to other methods of magnesium transport in eukaryotes and prokaryotes. A guiding question is thus whether human magnesium ion channels share greater homology with other human ion channels or other magnesium transport mechanisms.
+What is...?
 
-Then cd into scratch and clone this repository and move to the `run` folder:
+The methods I will use to do this are...
 
-    cd ~/scratch
-    git clone https://github.com/github_username/siphonophore16s.git # Substitute github_username with your GitHub username
-    cd siphonophore16s/run
+The data I will use are publicly available protein sequence gathered from the NCBI database, specifically proteins related to magnesium and sodium transport.  
 
-And [launch](https://web1.ccv.brown.edu/doc/batch-jobs.html) the run:
+## Methods
+This project consists of two main branches. The first branch uses protein sequence data to look at magnesium ion channels in Homo sapiens. Protein data is superior to DNA and RNA data in this instance because the channels operate at the protein level. We do not need to think about the relative importance of coding and noncoding DNA regions. Moreover, amino acids convey information in fewer letters than their corresponding DNA codons and avoid dealing with the degeneracy of the DNA code.
 
-    myq
-    sbatch mpi_raxml.sh
-    myq
+I began with a series of accession numbers pertaining to protein sequences involved in magnesium transport -- both in humans and other organisms. I also include accession numbers pertaining to epithelial sodium channel family as a control and the ribosomal protein as an outgroup. Using a procedure similar to the hydroilina exercise, I used ProteinBlast to find the corresponding protein sequence. I adjusted the resulting *.raw.fasta file to a *.fasta file by shortening the protein names by hand because many of the protein names were very similar and differed by only a single digit (as in the case of TRPM6 and TRPM7) or contained nonalphanumeric characters, namely parentheses and plus signs. The sed command was too blunt a tool to reformat the names, so it proved more efficient to do it manually.
 
-The `myq` program checks the status of your job. Execute it as many (or as few) times as you like to see if your analysis is running. Logging out won't stop your job.
+I then used an online [tool](http://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_nexus.php) and selected the protrein option to convert the *.fasta file *.nex file.
 
-When the job is done, add the output files to the repository and push them back to GitHub:
+All of the analyses were performed using RevBayes using slightly modified versions of existing phylogenetic models. In my first analysis, I used the Jukes-Cantor program from the hydrolina project and modified the program so that it corresponded to amino acid data instead of nucleotide data and that there were 20 possible character states for the 20 amino acids. In the second analysis, I modified the program again using the Jones function to simulate the JTT model, which relies upon a matrix of probability of amino acids evolution based on a large sample of proteins.
 
-    git add -A .
-    git commit -am "added result files from oscar"
-    git push
+A second branch of the project uses morphological data as a proof of principle to analyze ion channel phylogeny. Because of the precision and abundance of sequence data, it is the dominant method of phylogenetic analysis, especially when protein structures have not been fully resolved. Yet the mantra of biology that structure determines function rings true. A shortcoming of protein sequence data is that it only allows us to examine the primary structure of the ion channels--the order of amino acids. 
+Amino acid form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different amino acids may produce near-identical three-dimensional structure or a single residue substitution could contort the entire structure.
 
-Your results are now up at github. take a look in your `siphonophore16s/run/` folder on GitHub.
+The tools I used were... See analysis files at (links to analysis files).
+
+## Results
 
 
-### Inspecting the results on your laptop
+The tree in Figure 1...
 
-Now you will pull the files to your laptop for closer inspection. In the terminal on your laptop (not with ssh to Oscar!):
+## Discussion
 
-	cd ~
-	mkdir repos # a folder for your git repositories
-	cd repos
-    git clone https://github.com/github_username/siphonophore16s.git # Substitute github_username with your GitHub username
-    cd siphonophore16s/run
-    cat RAxML_bipartitions.boot100
+These results indicate...
 
-This will show the tree in newick format. 
+It was surprising to find that the first two analyses resulted in broadly similar conclusions, having expected the modified Jukes-Cantor model to provide an unreliable tree.
 
-Copy and paste it into FigTree. Click the edge that separates Rhizophysa_eysenhardti_60544963, Rhizophysa_filiformis_60544940, and Physalia_physalis_60544938 from the other taxa and click the "Reroot" button at the top of the window. Then, to see bootstrap values, click "Node Labels" on the left side of the page and in the "Display" drop down select "label".
+One of the continuing puzzles of phylogenetics involves differentiating between convergent and homologous evolution as well as horizontal evolution.
+MRS2, a human mitocondrial magnesium transporter is closely related to CorA, a bacterial magnesium transporter, as indicated by the JTT model tree and other research papers. CorA and MRS2 are considered to be homologous proteins.
 
-In the FigTree file menu, select "Export PDF..." and save the pdf in the `siphonophore16s/run` folder of your repository as `16s.pdf`.
-
-Now, head back to the command line and add the pdf to the repository:
-
-    git add 16s.pdf
-    git commit -am "added pdf of tree"
-    git push
-
-The files in the `run directory` include:
-
-- `mpi_raxml.sh` the code that ran your analysis
-- `siph16s.phy` the original data file
-- `MyMPIJob-11991390.out` the log file that has the program output for the analysis
-- `RAxML_bestTree.boot100` the most likely tree
-- `RAxML_bipartitions.boot100` the best tree, with bootstrap bipartition frequencies stored as *node* values (this is a bad way to store support, but included with raxml for compatibility with programs that expect bad behavior)
+The biggest difficulty in implementing these analyses was...
+A major difficulty in completing the project was my limited understanding of programming. In my project, I sought to do what I thought of as an interesting application of phylogentics and the topics we have discussed without thinking too much about feasibility of the computer model or my own limited proficiency in the area. This manifested itself in several challenges in implementing the programming aspect of the project. The project took me much longer than expected to complete. I ran into several hiccups in terms of syntax and execution. For example, there seemed to be a problem with loading my .nex file into the RevBayes program. I initially thought there was a syntax error in the command to input the discrete character data or that it had not been properly formatted for protein data. It turned out that the .nex file converted in Mesquite was noncompatable with RevBayes. By using an online .fasta to .nex conversion [tool](http://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_nexus.php) instead, I was able to create a compatable .nex file.
 
 
 
-Open `~/repos/siphonophore16s/readme.md` in your text editor, and answer the following questions (just add your answer on a line below the question):
+Another complication was that OSCAR couldn't process my analyses, requiring me to use my laptop computer instead. When I initially tried to run the JTT model analysis on OSCAR, the system initiated an error message that the program took up too much computing power. I subsequently reduced the number of iterations, which allowed the program to fully load and begin running, but the program paused midway through the run with the same error message. I therfore ran the program on my own machine, which ran slowly but with no error messages.
 
-#### Which clade has the longest branches?
-The branches containing the genus Vogtia and Hippopodius
+If I could do these analyses again, I would use a different, specialized version of the  JTT model. The in-program Jones function in RevBayes utilized in this project is based on the original [1992 paper](http://bioinformatics.oxfordjournals.org/content/8/3/275.short) that proposes a general protein matrix. A [1994 paper](http://onlinelibrary.wiley.com/doi/10.1016/0014-5793(94)80429-X/abstract) by the same authors offers a version of the JTT model specific to transmembrane protein, of which ion channels are a subtype. This second Jones model would have thus been more relevant to the analysis but I was not sure how to create a custom matrix function in RevBayes.
+If I did these analyses again, I would...
 
-#### How strong is the bootstrap support for the placement of Sphaeronectes? Where is it placed?
-Not particularly strong with a bootstrap value of 70, indicating that Sphaeronectes was placed in that position on 70 of the 100 trees generated. It is placed
-on its own subbranch whose shares a most recent common ancestor with the monophyletic group containing 
-genuses Muggiaea, Sulculeolaria, Lensia, Abylopsis, Diphyes and Chelophyes. 
-#### Bonus: What are the various placements of Clausophyid_sp (hint: you'll need to look in `RAxML_bootstrap.boot100`)
-Some of the locations of Clausophyid_sp include as part of the clade containing Nectadamas and Nectopyramis; as part of the clade containing
-Abylopsis, Diphyes, Chelophyes, Lensia, Sulileolaria, Muggiaea, Sphaeronectes, Chuniphyes and Clausophyes; and as part of an even larger clade
-Abylopsis, Diphyes, Chelophyes, Lensia, Sulileolaria, Muggiaea, Sphaeronectes, Chuniphyes, Clausophyes and additionally Gymnopraia,
-Desmophyes and Rosacea. Other groupings include in a monophyletic group with Stephalia, 
+## References
+(Payendeh et al, 2013) http://www.sciencedirect.com/science/article/pii/S0005273613002794?np=y
 
-
-Once you have saved your answers, commit them with:
-
-    git commit -am "answered questions"
-    git push
-
-
-### Submit your exercise with a pull request
-
-You will submit your repository back to me with a pull request. This is a bundle that describes all the changes you made to your repository. Go to your repository page at GitHub:
-
-    https://github.com/github_username/siphonophore16s
-
-where `github_username` is your github username.
-
-Click the green button that says "New pull request" and then, on the new page that comes up, "Create pull request".
-
-## Aditional resources
-
-The readme.md file is written in a language called [markdown](https://daringfireball.net/projects/markdown/syntax), which looks good as plain text and is automatically formatted for web view on GitHub. An intro to markdown gor GitHub is [here](https://guides.github.com/features/mastering-markdown/).
+(Hanukoglu and Hanukoglu, 2016) http://www.sciencedirect.com/science/article/pii/S0378111915015735
