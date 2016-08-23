@@ -29,7 +29,7 @@ What is...?
 
 The methods I will use to do this are...
 
-The data I will use are publicly available protein sequence gathered from the NCBI database, specifically proteins related to magnesium and sodium transport.  
+The data I will use are publicly available protein sequences gathered from the NCBI database, specifically proteins linked to magnesium and sodium transport.  
 
 ## Methods
 This project consists of two main branches. The first branch uses protein sequence data to look at magnesium ion channels in Homo sapiens. Protein data is superior to DNA and RNA data in this instance because the channels operate at the protein level. We do not need to think about the relative importance of coding and noncoding DNA regions. Moreover, amino acids convey information in fewer letters than their corresponding DNA codons and avoid dealing with the degeneracy of the DNA code.
