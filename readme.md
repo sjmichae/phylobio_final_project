@@ -31,7 +31,7 @@ The methods I will use to do this are...
 
 The data I will use are publicly available protein sequences gathered from the NCBI database, specifically proteins linked to magnesium and sodium transport.  
 
-## Methods
+## Methods and Rationale
 This project consists of two main branches. The first branch uses protein sequence data to look at magnesium and sodium ion channels. Protein data is superior to DNA and RNA data in this instance because the channels operate at the protein level. We do not need to think about the relative importance of coding and noncoding DNA regions. Moreover, amino acids convey information in fewer letters than their corresponding DNA codons and we can avoid dealing with the degeneracy of the DNA code.
 
 I began with a series of accession numbers pertaining to protein sequences involved in magnesium transport -- both in humans and prokaryotes. I also included accession numbers pertaining to ENaC/Deg family of ion channels as a control and the ribosomal protein as an outgroup. Using a procedure similar to the hydroilina exercise, I used ProteinBlast to find the corresponding protein sequence. I adjusted the resulting *.raw.fasta file to a *.fasta file by shortening the protein names by hand because many of the protein names were very similar and differed by only a single digit (as in the case of TRPM6 and TRPM7) or contained nonalphanumeric characters, namely parentheses and plus signs. The sed command was too blunt a tool to reformat the names, so it proved more efficient to do it manually.
@@ -42,8 +42,8 @@ All of the analyses were performed using RevBayes using slightly modified versio
 
 A second branch of the project uses morphological protein data as a proof of principle to analyze ion channel phylogeny. Because of the precision and abundance of sequence data, it is the dominant method of phylogenetic analysis, especially when protein structures have not been fully resolved. Yet the mantra of biology that structure determines function rings true. 
 
-A shortcoming of protein sequence data is that it only allows us to examine the primary structure--the order of amino acids--of the ion channels or any other protein for that matter. 
-Amino acids form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different polypeptide chains may produce near-identical three-dimensional structures or a single residue substitution could contort the entire structure. Protein evolution models tend to deal with this quandary by 
+A shortcoming of protein sequence data is that it only allows us to examine the primary structure--the order of amino acids--of the ion channels or any other protein for that matter. Yet the mantra of biology that structure determines function rings true.
+Amino acids form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different polypeptide chains may produce near-identical three-dimensional structures or a single residue substitution could contort the entire structure. Protein evolution models tend to deal with this quandary by focusing on the relative rates of evolution between each amino acid pair.
 
 
 The tools I used were... See analysis files at (links to analysis files).
