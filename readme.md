@@ -51,7 +51,8 @@ Amino acids form secondary, tertiary and quaternary structures in which the vari
 For my morphology data, I compiled a table of quantifiable physical characteristics of the ion channel such as the number of transmembrane domains, number of subunits and number of extracellular loops. All of this data was gathered from the available literature. An ion channel is an ideal choice for collecting morphological data becuase the it has identifiable molecular substructures.
 Below is the full table:
 
-[table](
+[table](https://github.com/sjmichae/phylobio_final_project/blob/master/ionchannelmorphologytable.xlsx)
+
 
 I simplified the table by limiting the organism column to human or bacteria and removing references to specific locations of the human ion channels. I also removed the the familial column as it effectively served as a prior. 
 
