@@ -49,6 +49,9 @@ A shortcoming of protein sequence data is that it only allows us to examine the 
 Amino acids form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different polypeptide chains may produce near-identical three-dimensional structures or a single residue substitution could contort the entire structure. Protein evolution models tend to deal with this quandary by focusing on the relative rates of evolution between each amino acid pair. For instance, the Dayhoff matrix shows that a negatively-charged aspartate residue is more likely to be substituted for a negatively-charged glutamate residue than any other amino acid.
 
 For my morphology data, I compiled a table of quantifiable physical characteristics of the ion channel such as the number of transmembrane domains, number of subunits and number of extracellular loops. All of this data was gathered from the available literature. An ion channel is an ideal choice for collecting morphological data becuase the it has identifiable molecular substructures.
+Below is the full table:
+
+I simplified the table by limiting the organism column to human or bacteria and removing references to specific locations of the human ion channels. I also removed the the familial column as it effectively served as a prior. 
 
 
 The tools I used were... See analysis files at (links to analysis files).
