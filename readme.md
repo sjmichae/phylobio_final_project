@@ -53,7 +53,7 @@ Below is the full [table](https://github.com/sjmichae/phylobio_final_project/blo
 
 Channel|Ions|Family|Organism|Ion Charge|# TM domains / subunit|# Subunits|Total TMs|-omer|#EL Subdomains|#IL Subdomains
 ---|---|---|---|---|---|---|---|---|---|---
-ASIC1 |	H + |	ENaC/Deg |	human |	1 |	2 |	3	| 6	| heteromer |	5	| 1
+ASIC1|H+|ENaC/Deg|human|1|2|3|6|heteromer|5|1
 ASIC4	H +	ENaC/Deg	human	1	2	3	6	heteromer	5	1
 ENaC beta	Na+	ENaC/Deg	human	1	2	3	6	heteromer	5	1
 TRMP6	Mg 2+	TRP (transient receptor potetial)	human (kidney, intestine)	2	6	4	24	heteromer	3	2
