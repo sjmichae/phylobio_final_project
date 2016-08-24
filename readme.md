@@ -54,8 +54,8 @@ Attached is the full [table](https://github.com/sjmichae/phylobio_final_project/
 Channel|Ions|Organism|Ion Charge|# TM domains / subunit|# Subunits|Total TMs|-omer|#EL Loops|#IL Loops
 ---|---|---|---|---|---|---|---|---|---
 ASIC1|H+|human|1|2|3|6|heteromer|5|1
-ASIC4	H+	human	1	2	3	6	heteromer	5	1
-ENaC beta	Na+	human	1	2	3	6	heteromer	5	1
+ASIC4|H+|human|1|2|3|6|heteromer|5|1
+ENaC beta|Na+|human|1|2|3|6|heteromer|5|1
 TRMP6	Mg2+	human	2	6	4	24	heteromer	3	2
 TRPM6_X12	Mg2+	human	2	6	4	24	heteromer	3	2
 TRPM7	Mg2+, Ca2+	human	2	6	4	24	heteromer	3	2
