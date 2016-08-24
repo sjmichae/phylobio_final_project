@@ -52,7 +52,7 @@ For my morphology data, I compiled a table of quantifiable physical characterist
 Attached is the full [table](https://github.com/sjmichae/phylobio_final_project/blob/master/ionchannelmorphologytable.xlsx).
 
 Channel|Ions|Organism|Ion Charge|# TM domains / subunit|# Subunits|Total TMs|-omer|#EL Loops|#IL Loops
----|---|---|---|---|---|---|---|---|---
+:---|:---|:---|:---|:---|:---|:---|:---|:---|:---
 ASIC1|H+|human|1|2|3|6|heteromer|5|1
 ASIC4|H+|human|1|2|3|6|heteromer|5|1
 ENaC beta|Na+|human|1|2|3|6|heteromer|5|1
