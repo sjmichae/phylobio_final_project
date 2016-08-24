@@ -23,13 +23,16 @@ OK, here we go.
 # Comparing Morphological and Protein Sequence Models of Ion Channel Phylogeny
 
 ## Introduction and Goals
-
-The goal of my project is to examine magnesium transport in the human body using phylogeny by comparing human magnesium ion channels to other ion channel families and to other methods of magnesium transport in eukaryotes and prokaryotes. A guiding question is thus whether human magnesium ion channels share greater homology with other human ion channels or other magnesium transport mechanisms.
+The goal of my project is to compare a morphological model based on protein substructures with a standard protein sequence evolution model. To that ends, this project examine magnesium transport in the human body using phylogeny by comparing human magnesium ion channels to other ion channel families and to other methods of magnesium transport in eukaryotes and prokaryotes. A guiding question is thus whether human magnesium ion channels share greater homology with other human ion channels or other magnesium transport mechanisms.
 What is...?
+
+Magnesium ions channels hold an essential role in human cellular physiology, regulating bone development, cardiomiocyte activity and energy release in conjunction with ATP. Divalent magnesium ions are the smallest cations involved in cellular pathways when dehydrated and among the largest when hydrated. Magnesium ion channel structures are also less resolved than other ion channel families (namely ENaC/Deg) and fairly diverse. This project aims to examine magnesium ion channel phylogeny to better understand the protein evolution of ion channels.
+
+
 
 The methods I will use to do this are...
 
-The data I will use are publicly available protein sequences gathered from the NCBI database, specifically proteins linked to magnesium and sodium transport.  
+The data I will use are publicly available protein sequences gathered from the NCBI database, specifically proteins linked to magnesium and sodium transport. I also used a data table of physical characteristics of ion channels, gathered from the published literature.
 
 ## Methods and Rationale
 This project consists of two main branches. The first branch uses protein sequence data to look at magnesium and sodium ion channels. Protein data is superior to DNA and RNA data in this instance because the channels operate at the protein level. We do not need to think about the relative importance of coding and noncoding DNA regions. Moreover, amino acids convey information in fewer letters than their corresponding DNA codons and we can avoid dealing with the degeneracy of the DNA code.
