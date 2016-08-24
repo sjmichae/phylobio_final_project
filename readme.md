@@ -49,22 +49,22 @@ A shortcoming of protein sequence data is that it only allows us to examine the 
 Amino acids form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different polypeptide chains may produce near-identical three-dimensional structures or a single residue substitution could contort the entire structure. Protein evolution models tend to deal with this quandary by focusing on the relative rates of evolution between each amino acid pair. For instance, the Dayhoff matrix shows that a negatively-charged aspartate residue is more likely to be substituted for a negatively-charged glutamate residue than any other amino acid.
 
 For my morphology data, I compiled a table of quantifiable physical characteristics of the ion channel such as the number of transmembrane domains, number of subunits and number of extracellular loops. All of this data was gathered from the available literature. An ion channel is an ideal choice for collecting morphological data becuase the it has identifiable molecular substructures.
-Below is the full [table](https://github.com/sjmichae/phylobio_final_project/blob/master/ionchannelmorphologytable.xlsx):
+Attached is the full [table](https://github.com/sjmichae/phylobio_final_project/blob/master/ionchannelmorphologytable.xlsx).
 
-Channel|Ions|Family|Organism|Ion Charge|# TM domains / subunit|# Subunits|Total TMs|-omer|#EL Loops|#IL Loops
----|---|---|---|---|---|---|---|---|---|---
-ASIC1|H+|ENaC/Deg|human|1|2|3|6|heteromer|5|1
-ASIC4	H +	ENaC/Deg	human	1	2	3	6	heteromer	5	1
-ENaC beta	Na+	ENaC/Deg	human	1	2	3	6	heteromer	5	1
-TRMP6	Mg 2+	TRP (transient receptor potetial)	human (kidney, intestine)	2	6	4	24	heteromer	3	2
-TRPM6_X12	Mg 2+	TRP (transient receptor potetial)	human (kidney, intestine)	2	6	4	24	heteromer	3	2
-TRPM7	Mg 2+, Ca 2+	TRP (transient receptor potetial)	human, universallly	2	6	4	24	heteromer	3	2
-MgtE_Thermus	Mg 2+, also Co 2+	(related to SLC41A1)	Thermus thermophilus	2	5	2	10	homomer	2	2
-MgtE_Myobacterium	Mg 2+, also Co 2+	(related to SLC41A1)	Myobacterium	2	5	2	10	homomer	2	2
-MRS2	Mg 2+	(related to CorA)	human, mitocondrial	2	2	5	10	homomer	1	2
-CorA	Mg 2+,  also  Co 2+, Ni 2+	CorA (related to MRS2)	Pantuea ananatis (bacteria)	2	2	5	10	homomer	5	1
-SLC41A1	Mg 2+ out, Na+ in	(related to MgtE)	human	1, 2	5.5	2	11	homomer	1	1
-ALR1	Mg 2+, also Ni, Mn, Zn, Co	(related to CorA)	human	2	2	5	10	homomer	2	1
+Channel|Ions|Organism|Ion Charge|# TM domains / subunit|# Subunits|Total TMs|-omer|#EL Loops|#IL Loops
+---|---|---|---|---|---|---|---|---|---
+ASIC1|H+|human|1|2|3|6|heteromer|5|1
+ASIC4	H+	human	1	2	3	6	heteromer	5	1
+ENaC beta	Na+	human	1	2	3	6	heteromer	5	1
+TRMP6	Mg2+	human	2	6	4	24	heteromer	3	2
+TRPM6_X12	Mg2+	human	2	6	4	24	heteromer	3	2
+TRPM7	Mg2+, Ca2+	human	2	6	4	24	heteromer	3	2
+MgtE_Thermus	Mg2+, also Co2+	bacteria	2	5	2	10	homomer	2	2
+MgtE_Myobacterium	Mg2+, also Co2+	bacteria	2	5	2	10	homomer	2	2
+MRS2	Mg2+	human	2	2	5	10	homomer	1	2
+CorA	Mg2+,  also  Co2+, Ni2+	bacteria	2	2	5	10	homomer	5	1
+SLC41A1	Mg2+ out, Na+ in	human	1, 2	5.5	2	11	homomer	1	1
+ALR1	Mg2+, also Ni2+, Mn2+, Zn2+, Co2+	human	2	2	5	10	homomer	2	1
 
 
 I simplified the table by limiting the organism column to human or bacteria and removing references to specific locations of the human ion channels. I also removed the the familial column as it effectively served as a prior. 
