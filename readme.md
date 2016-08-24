@@ -97,7 +97,7 @@ Another complication was that OSCAR couldn't process my analyses, requiring me t
 
 If I could do these analyses again, I would use a different, specialized version of the  JTT model. The in-program Jones function in RevBayes utilized in this project is based on the original [1992 paper](http://bioinformatics.oxfordjournals.org/content/8/3/275.short) that proposes a general protein matrix. A [1994 paper](http://onlinelibrary.wiley.com/doi/10.1016/0014-5793(94)80429-X/abstract) by the same authors offers a version of the JTT model specific to transmembrane protein, of which ion channels are a subtype. This second Jones model would have thus been more relevant to the analysis but I was not sure how to create a custom matrix function in RevBayes.
 
-A morphological protein model could prove useful in cases of a longer evolutionary timespan, where relative amino acid evolution frequency is less important. It could also 
+A morphological protein model could prove useful in cases of a longer evolutionary timespan, where relative amino acid evolution frequency is less important. It could also prove useful in identifying orthologues across trees based on structural similarites.
 
 
 
@@ -108,3 +108,5 @@ If I did these analyses again, I would...
 (Payendeh et al, 2013) http://www.sciencedirect.com/science/article/pii/S0005273613002794?np=y
 
 (Hanukoglu and Hanukoglu, 2016) http://www.sciencedirect.com/science/article/pii/S0378111915015735
+
+(Wiens) http://sysbio.oxfordjournals.org/content/53/4/653.full#ref-55
