@@ -76,7 +76,9 @@ The tools I used were... See analysis files at (links to analysis files).
 
 ## Results
 
-![JC Model best Tree](mg_JC_non_clock.trees_with_distance.png)
+![JC Model Best Tree](mg_JC_non_clock.trees_with_distance.png)
+
+![JTT Model Best Tree](mg_JTTmodel_non_clock_run_2_.tree_branch_length.png)
 
 The tree in Figure 1...
 
