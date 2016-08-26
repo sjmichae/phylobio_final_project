@@ -23,11 +23,11 @@ OK, here we go.
 # Comparing Morphological and Protein Sequence Models of Ion Channel Phylogeny
 
 ## Introduction and Goals
-The goal of my project is to compare a morphological model based on protein substructures with a standard protein sequence evolution model. To that end, this project examines magnesium transport in the human body using phylogeny by comparing human magnesium ion channels to other ion channel families and to other methods of magnesium transport in eukaryotes and prokaryotes. A guiding question is thus whether human magnesium ion channels share greater homology with other human ion channels or other magnesium transport mechanisms.
+The goal of my project is to compare a morphological model based on protein substructures with a standard protein sequence evolution model. To that end, this project examines magnesium transport in the human body using phylogeny by comparing human magnesium ion channels to other ion channel families and to other methods of magnesium transport in eukaryotes and prokaryotes. 
 
-Magnesium ions channels hold an essential role in human cellular physiology, regulating bone development, cardiomiocyte activity and energy release in conjunction with ATP. Divalent magnesium ions are the smallest cations involved in cellular pathways when dehydrated and among the largest when hydrated. Magnesium ion channel structures are also less resolved than other ion channel families (namely ENaC/Deg) and fairly diverse. This project aims to examine magnesium ion channel phylogeny to better understand the protein evolution of ion channels.
+Magnesium ions channels hold an essential role in human cellular physiology, regulating bone development, cardiomiocyte activity and energy release in conjunction with ATP. Divalent magnesium ions are the smallest cations involved in cellular pathways when dehydrated and among the largest when hydrated. Magnesium ion channel structures are also less resolved than other ion channel families (namely ENaC/Deg) and fairly diverse. This project aims to examine magnesium ion channel phylogeny to better understand the protein evolution of ion channels. A guiding question is thus whether a detailed protein morphology model can approach a sequence based likelihood model of the same protein.
 
-The methods I will use to do this are... 
+The methods I will use are RevBayes analyses of protein sequence data using the modified Jukes-Cantor and JTT models and Raxml analyses of protein morphology data using an ordered and unordered model.
 
 The data I will use are publicly available protein sequences gathered from the NCBI database, specifically proteins linked to magnesium and sodium transport. I also used a data table of physical characteristics of ion channels, gathered from the published literature.
 
@@ -45,7 +45,7 @@ A second branch of the project uses morphological protein data as a proof of pri
 A shortcoming of protein sequence data is that it only allows us to examine the primary structure--the order of amino acids--of the ion channels or any other protein for that matter. Amino acids form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different polypeptide chains may produce near-identical three-dimensional structures or a single residue substitution could contort the entire structure. Protein evolution models tend to deal with this quandary by focusing on the relative rates of evolution between each amino acid pair. For instance, the Dayhoff matrix shows that a negatively-charged aspartate residue is more likely to be substituted for a negatively-charged glutamate residue than any other amino acid. Subsequent models of protein evolution such as JTT and WAG use different matrices, but still focus on the primary structure.
 
 This represents a good model 
-Defenders of morphological 
+Even defenders of morphological 
 An ion channel is an ideal choice for collecting morphological data because it has identifiable molecular motifs.
 
 For my morphology data, I compiled a table of quantifiable physical characteristics of the ion channel such as the number of transmembrane domains, number of subunits and number of extracellular loops. All of this data was gathered from the available literature and complied in an Excel spreadhsheet. 
@@ -72,7 +72,7 @@ I converted the simplified Excel table to "Windows Formatted Text", a .txt file 
 
 Raxml allows for 32 character states in its multistate model with with double-digit numbers represented by letters. Since Raxml also requires that that the multistate characters must be used in "the order in which they are available," I created a new ion channel called FAKE consisting of the consecutive missing characters and later pruned FAKE from the output besttree file. Raxml also does not allow for identical sequences so the two MgtE and TRPM6 channels were consolidated. I ran two Raxml analyses, one with an [unordered multistate model](raxml_morph_unordered.sh) and one with an [ordered multistate model](raxml_multistateordered.sh) using the [The Excelis Lab code.](http://sco.h-its.org/exelixis/web/software/raxml/hands_on.html)
 
-All of the output trees were analyzed in FigTree and the logs were examined in Tracer.
+All of the output trees were analyzed in FigTree and the .logs were examined in Tracer.
 
 ## Results
 All of the trees are displayed with the raw branch length as node labels.
@@ -120,3 +120,16 @@ If I did these analyses again, I would...
 
 (Wiens) http://sysbio.oxfordjournals.org/content/53/4/653.full#ref-55
 
+
+http://www.biochemj.org/content/412/3/469
+http://www.sciencedirect.com.revproxy.brown.edu/science/article/pii/S0378111915015735
+http://www.sciencedirect.com/science/article/pii/S0005273613002794
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3503211/
+http://www.biochemj.org/content/439/1/129.long
+http://www.sciencedirect.com.revproxy.brown.edu/science/article/pii/S0925443907000841
+http://www.jbc.org/content/280/45/37763.full.pdf
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2630241/
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3017111/
+http://physiologyonline.physiology.org/content/23/5/275
+http://ajpcell.physiology.org.revproxy.brown.edu/content/302/1/C318
+http://www.sciencedirect.com.revproxy.brown.edu/science/article/pii/S096098221000566X
