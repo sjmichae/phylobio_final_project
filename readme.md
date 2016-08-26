@@ -27,9 +27,7 @@ The goal of my project is to compare a morphological model based on protein subs
 
 Magnesium ions channels hold an essential role in human cellular physiology, regulating bone development, cardiomiocyte activity and energy release in conjunction with ATP. Divalent magnesium ions are the smallest cations involved in cellular pathways when dehydrated and among the largest when hydrated. Magnesium ion channel structures are also less resolved than other ion channel families (namely ENaC/Deg) and fairly diverse. This project aims to examine magnesium ion channel phylogeny to better understand the protein evolution of ion channels.
 
-
-
-The methods I will use to do this are...
+The methods I will use to do this are... 
 
 The data I will use are publicly available protein sequences gathered from the NCBI database, specifically proteins linked to magnesium and sodium transport. I also used a data table of physical characteristics of ion channels, gathered from the published literature.
 
@@ -40,12 +38,11 @@ I began with a series of accession numbers pertaining to protein sequences invol
 
 I then used an online [tool](http://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_nexus.php) and selected the protein option to convert the *.fasta file *.nex file.
 
-All of the analyses were performed in RevBayes using slightly modified versions of existing phylogenetic models. In my first analysis, I used the Jukes-Cantor program from the hydrolina project and modified the program so that it corresponded to amino acid data instead of nucleotide data and that there were 20 possible character states for the 20 amino acids. In the second analysis, I modified the program again using the Jones function to simulate the JTT model, which relies upon a matrix of amino acid evolution probabilities based on a large sample of proteins.
+Both of these analyses were performed in RevBayes using slightly modified versions of existing phylogenetic models. In my first analysis, I used the Jukes-Cantor program from the hydrolina project and modified the program so that it corresponded to amino acid data instead of nucleotide data and that there were 20 possible character states for the 20 amino acids. In the second analysis, I modified the program again using the Jones function to simulate the JTT model, which relies upon a matrix of amino acid evolution probabilities based on a large sample of proteins.
 
-A second branch of the project uses morphological protein data as a proof of principle to analyze ion channel phylogeny. Because of the precision and abundance of sequence data, it is the dominant method of phylogenetic analysis, especially when protein structures have not been fully resolved. Yet the mantra of biology that structure determines function rings true. 
+A second branch of the project uses morphological protein data as a proof of principle to analyze ion channel phylogeny. Because of the precision and abundance of sequence data, it is now the dominant method of phylogenetic analysis, especially when protein structures have not been fully resolved. Yet the mantra of biology that structure determines function rings true. 
 
-A shortcoming of protein sequence data is that it only allows us to examine the primary structure--the order of amino acids--of the ion channels or any other protein for that matter. Yet the mantra of biology that structure determines function rings true.
-Amino acids form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different polypeptide chains may produce near-identical three-dimensional structures or a single residue substitution could contort the entire structure. Protein evolution models tend to deal with this quandary by focusing on the relative rates of evolution between each amino acid pair. For instance, the Dayhoff matrix shows that a negatively-charged aspartate residue is more likely to be substituted for a negatively-charged glutamate residue than any other amino acid.
+A shortcoming of protein sequence data is that it only allows us to examine the primary structure--the order of amino acids--of the ion channels or any other protein for that matter. Amino acids form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different polypeptide chains may produce near-identical three-dimensional structures or a single residue substitution could contort the entire structure. Protein evolution models tend to deal with this quandary by focusing on the relative rates of evolution between each amino acid pair. For instance, the Dayhoff matrix shows that a negatively-charged aspartate residue is more likely to be substituted for a negatively-charged glutamate residue than any other amino acid. Subsequent models of protein evolution such as JTT and WAG use different matrices, but still focus on the primary structure This represents a good model 
 
 For my morphology data, I compiled a table of quantifiable physical characteristics of the ion channel such as the number of transmembrane domains, number of subunits and number of extracellular loops. All of this data was gathered from the available literature and complied in an Excel spreadhsheet. An ion channel is an ideal choice for collecting morphological data because the it has identifiable molecular substructures.
 Attached is the full [table](https://github.com/sjmichae/phylobio_final_project/blob/master/ionchannelmorphologytable.xlsx).
@@ -55,17 +52,17 @@ I simplified the table by limiting the organism column to human or bacteria and 
 Channel|Ions|Organism|Ion Charge|# TM domains / subunit|# Subunits|Total TMs|-omer|#EL Loops|#IL Loops
 :---|:---|:---|:---|:---|:---|:---|:---|:---|:---
 ASIC1|H+|human|1|2|3|6|heteromer|5|1
-ASIC4|H+|human|1|2|3|6|heteromer|5|1
+ASIC4|H+|human|1|2|3|6|homomer|5|1
 ENaC beta|Na+|human|1|2|3|6|heteromer|5|1
 TRMP6|Mg2+|human|2|6|4|24|heteromer|3|2
 TRPM6_X12|Mg2+|human|2|6|4|24|heteromer|3|2
 TRPM7|Mg2+, Ca2+|human|2|6|4|24|heteromer|3|2
-MgtE_Thermus	Mg2+, also Co2+	bacteria	2	5	2	10	homomer	2	2
-MgtE_Myobacterium	Mg2+, also Co2+	bacteria	2	5	2	10	homomer	2	2
-MRS2	Mg2+	human	2	2	5	10	homomer	1	2
-CorA	Mg2+,  also  Co2+, Ni2+	bacteria	2	2	5	10	homomer	5	1
-SLC41A1	Mg2+ out, Na+ in	human	1, 2	5.5	2	11	homomer	1	1
-ALR1	Mg2+, also Ni2+, Mn2+, Zn2+, Co2+	human	2	2	5	10	homomer	2	1
+MgtE_Thermus|Mg2+, also Co2+|bacteria|2|5|2|10|homomer|2|2
+MgtE_Myobacterium|Mg2+, also Co2+|bacteria|2|5|2|10|homomer|2|2
+MRS2|Mg2+|human|2|2|5|10|homomer|1|2
+CorA|Mg2+,  also  Co2+, Ni2+|bacteria|2|2|5|10|homomer|5|1
+SLC41A1|Mg2+ out, Na+ in|human|1, 2|5.5|2|11|homomer|1|1
+ALR1|Mg2+, also Ni2+, Mn2+, Zn2+, Co2+|human|2|2|5|10|homomer|2|1
 
 I converted the simplified Excel table to "Windows Formatted Text", a .txt file that preserved the line breaks and is readable for the user and the machine.
 
