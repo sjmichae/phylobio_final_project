@@ -42,9 +42,13 @@ Both of these analyses were performed in RevBayes using slightly modified versio
 
 A second branch of the project uses morphological protein data as a proof of principle to analyze ion channel phylogeny. Because of the precision and abundance of sequence data, it is now the dominant method of phylogenetic analysis, especially when protein structures have not been fully resolved. Yet the mantra of biology that structure determines function rings true. 
 
-A shortcoming of protein sequence data is that it only allows us to examine the primary structure--the order of amino acids--of the ion channels or any other protein for that matter. Amino acids form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different polypeptide chains may produce near-identical three-dimensional structures or a single residue substitution could contort the entire structure. Protein evolution models tend to deal with this quandary by focusing on the relative rates of evolution between each amino acid pair. For instance, the Dayhoff matrix shows that a negatively-charged aspartate residue is more likely to be substituted for a negatively-charged glutamate residue than any other amino acid. Subsequent models of protein evolution such as JTT and WAG use different matrices, but still focus on the primary structure This represents a good model 
+A shortcoming of protein sequence data is that it only allows us to examine the primary structure--the order of amino acids--of the ion channels or any other protein for that matter. Amino acids form secondary, tertiary and quaternary structures in which the various residues and subunits interact. Two different polypeptide chains may produce near-identical three-dimensional structures or a single residue substitution could contort the entire structure. Protein evolution models tend to deal with this quandary by focusing on the relative rates of evolution between each amino acid pair. For instance, the Dayhoff matrix shows that a negatively-charged aspartate residue is more likely to be substituted for a negatively-charged glutamate residue than any other amino acid. Subsequent models of protein evolution such as JTT and WAG use different matrices, but still focus on the primary structure.
 
-For my morphology data, I compiled a table of quantifiable physical characteristics of the ion channel such as the number of transmembrane domains, number of subunits and number of extracellular loops. All of this data was gathered from the available literature and complied in an Excel spreadhsheet. An ion channel is an ideal choice for collecting morphological data because the it has identifiable molecular substructures.
+This represents a good model 
+Defenders of morphological 
+An ion channel is an ideal choice for collecting morphological data because it has identifiable molecular motifs.
+
+For my morphology data, I compiled a table of quantifiable physical characteristics of the ion channel such as the number of transmembrane domains, number of subunits and number of extracellular loops. All of this data was gathered from the available literature and complied in an Excel spreadhsheet. 
 Attached is the full [table](https://github.com/sjmichae/phylobio_final_project/blob/master/ionchannelmorphologytable.xlsx).
 
 I simplified the table by limiting the organism column to human or bacteria and removing references to specific locations of the human ion channels. I also removed the the familial column as it effectively served as a prior. The simplified table used for the matrix is below:
@@ -64,7 +68,9 @@ CorA|Mg2+,  also  Co2+, Ni2+|bacteria|2|2|5|10|homomer|5|1
 SLC41A1|Mg2+ out, Na+ in|human|1, 2|5.5|2|11|homomer|1|1
 ALR1|Mg2+, also Ni2+, Mn2+, Zn2+, Co2+|human|2|2|5|10|homomer|2|1
 
-I converted the simplified Excel table to "Windows Formatted Text", a .txt file that preserved the line breaks and is readable for the user and the machine.
+I converted the simplified Excel table to "Windows Formatted Text", a .txt file that preserved the line breaks and is readable for the user and the machine. I wrote a [sed](tablecommandsforshell.txt) command to convert the word variables to integral values for Raxml parsimony analysis. However, Raxml does not accept multiple character states to occur simultaneously in the same locus. It was therefore simpler to manually change the loci with multiple simultaneous character states (ion name, ion charge) to multiple binary loci.
+
+Raxml allows for 32 character states with  
 
 
 
