@@ -71,10 +71,11 @@ I converted the simplified Excel table to "Windows Formatted Text", a .txt file 
 The tools I used were... See analysis files at (links to analysis files).
 
 ## Results
-
+All of the trees are displayed with the raw branch length as node labels. Figure 1 displays the best tree for the amino acid version of the Jukes-Cantor model using sequence data.
 ![JC Model Best Tree](mg_JC_non_clock.trees_with_distance.png)
-
+Figure 2 displays the best tree for the JTT model of protein evolution using sequence data.
 ![JTT Model Best Tree](mg_JTTmodel_non_clock_run_2_.tree_branch_length.png)
+Figure 3 
 
 The tree in Figure 1...
 
