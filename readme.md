@@ -38,7 +38,7 @@ I began with a series of accession numbers pertaining to protein sequences invol
 
 I then used an online [tool](http://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_nexus.php) and selected the protein option to convert the *.fasta file *.nex file.
 
-Both of these analyses were performed in RevBayes using slightly modified versions of existing phylogenetic models. In my first analysis, I used the Jukes-Cantor program from the hydrolina project and modified the program so that it corresponded to amino acid data instead of nucleotide data and that there were 20 possible character states for the 20 amino acids. In the second analysis, I modified the program again using the Jones function to simulate the JTT model, which relies upon a matrix of amino acid evolution probabilities based on a large sample of proteins.
+Both of these analyses were performed in RevBayes using slightly modified versions of existing phylogenetic models. In my first analysis, I used the [Jukes-Cantor program](JukesCantorProtein.Rev) from the hydrolina project and modified the program so that it corresponded to amino acid data instead of nucleotide data and that there were 20 possible character states for the 20 amino acids. In the second analysis, I modified the program again using the [Jones function to simulate the JTT model](JTTProtein.Rev), which relies upon a matrix of amino acid evolution probabilities based on a large sample of proteins.
 
 A second branch of the project uses morphological protein data as a proof of principle to analyze ion channel phylogeny. Because of the precision and abundance of sequence data, it is now the dominant method of phylogenetic analysis, especially when protein structures have not been fully resolved. Yet the mantra of biology that structure determines function rings true. 
 
@@ -133,3 +133,4 @@ http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3017111/
 http://physiologyonline.physiology.org/content/23/5/275
 http://ajpcell.physiology.org.revproxy.brown.edu/content/302/1/C318
 http://www.sciencedirect.com.revproxy.brown.edu/science/article/pii/S096098221000566X
+http://compbio.berkeley.edu/class/c246/Reading/dayhoff-1978-apss.pdf
