@@ -62,7 +62,7 @@ TRMP6|Mg2+|human|2|6|4|24|heteromer|3|2
 TRPM6_X12|Mg2+|human|2|6|4|24|heteromer|3|2
 TRPM7|Mg2+, Ca2+|human|2|6|4|24|heteromer|3|2
 MgtE_Thermus|Mg2+, also Co2+|bacteria|2|5|2|10|homomer|2|2
-MgtE_Myobacterium|Mg2+, also Co2+|bacteria|2|5|2|10|homomer|2|2
+MgtE_Myobac-terium|Mg2+, also Co2+|bacteria|2|5|2|10|homomer|2|2
 MRS2|Mg2+|human|2|2|5|10|homomer|1|2
 CorA|Mg2+,  also  Co2+, Ni2+|bacteria|2|2|5|10|homomer|5|1
 SLC41A1|Mg2+ out, Na+ in|human|1, 2|5.5|2|11|homomer|1|1
