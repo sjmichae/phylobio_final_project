@@ -1,0 +1,68 @@
+
+
+This is RAxML version 8.2.9 released by Alexandros Stamatakis on July 20 2016.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 17 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 0.00%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 17
+Name: No Name Provided
+DataType: Multi-State with 25 distinct states in use (maximum 32)
+Substitution Matrix: Ordered Likelihood
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC -p 12345 -m MULTIGAMMA -s datamorphologyset.phy -K ORDERED -n trueorderedmorphtree 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 0.040 
+
+Inference[0]: Time 3.871264 GAMMA-based likelihood -328.844597, best rearrangement setting 5
+alpha[0]: 3.214427 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -328.844036 tree written to file /Users/stevenmichael/Documents/PhyloBio/finalproject/RAxML_result.trueorderedmorphtree
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -328.844036 .... 
+
+Final GAMMA-based Score of best tree -328.844036
+
+Program execution info written to /Users/stevenmichael/Documents/PhyloBio/finalproject/RAxML_info.trueorderedmorphtree
+Best-scoring ML tree written to: /Users/stevenmichael/Documents/PhyloBio/finalproject/RAxML_bestTree.trueorderedmorphtree
+
+Overall execution time: 4.368602 secs or 0.001214 hours or 0.000051 days
+

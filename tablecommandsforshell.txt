@@ -1,0 +1,17 @@
+# This runs with "sh -e tablecommandsforshell.txt"
+# These are the commands for converting the Ion Channel Table
+
+#Turning all word variables to numbers for sake of simplicity
+
+#For organism, bacteria=0 and human=1
+#This command works in command line
+# General format: sed -E 's/input/output/g'
+# Removes "+" signs
+# bacteria=0; human=1:
+# H+ = 0; Na+ = 1; Mg2+ =2; Ca2+ = 3; Co2+ = 4; Ni2+ = 5; Mn2+ = 6; Zn2+ = 7;
+# heteromer = 0; homomer = 1
+# Removes first line of headings
+sed -E 's/[+]//g' morphologytable.txt | sed -E 's/bacteria/0/g' | sed -E 's/human/1/g' | sed -E 's/H+/0/g' | sed -E 's/Na+/1/g'| sed -E 's/Mg2+/2/g' | sed -E 's/Ca2+/3/g' | sed -E 's/Co2+/4/g' | sed -E 's/Ni2+/5/g' | sed -E 's/Mn2+/6/g' | sed -E 's/Zn2+/7/g'| sed -E 's/heteromer/0/g' | sed -E 's/homomer/1/g' | sed -E '1d' > morphology.txt
+
+#Input morphologytable.txt
+#Output morphology.txt
