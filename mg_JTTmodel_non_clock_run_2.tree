@@ -1,0 +1,23 @@
+#NEXUS
+
+	Begin taxa;
+	Dimensions ntax=12;
+	Taxlabels
+		ASIC1
+		ASIC4
+		CorA_Pantoea_ananatis
+		MRS2
+		Mg2+_transporter_ALR1_Saccharomyces_cerevisiae
+		Mg2_transport_transmembrane_protein_MgtE_Mycobacterium_tuberculosis
+		Mg_transporter_mgtE_Thermus_thermophilus
+		SLC41A1
+		TRPM6
+		TRPM6_X12
+		TRPM7
+		sodium_channel_subunit_beta
+		;
+End;
+
+Begin trees;
+tree TREE1 = [&R](((((((((ASIC1[&index=11,posterior=1.000000,ccp=1.000000]:0.418630,ASIC4[&index=10,posterior=1.000000,ccp=1.000000]:0.307365)[&index=12,posterior=1.000000,ccp=1.000000,height_95%_HPD={nan,0.580624}]:0.488503,sodium_channel_subunit_beta[&index=9,posterior=1.000000,ccp=1.000000]:0.900869)[&index=13,posterior=1.000000,ccp=1.000000,height_95%_HPD={nan,0.48992}]:0.375361,Mg2+_transporter_ALR1_Saccharomyces_cerevisiae[&index=8,posterior=1.000000,ccp=1.000000]:1.192495)[&index=14,posterior=0.425319,ccp=0.415254,height_95%_HPD={nan,0.265873}]:0.159252,SLC41A1[&index=7,posterior=1.000000,ccp=0.415254]:1.261286)[&index=15,posterior=0.982787,ccp=0.977568,height_95%_HPD={nan,0.464805}]:0.315146,(Mg2_transport_transmembrane_protein_MgtE_Mycobacterium_tuberculosis[&index=6,posterior=1.000000,ccp=1.000000]:0.588894,Mg_transporter_mgtE_Thermus_thermophilus[&index=5,posterior=1.000000,ccp=1.000000]:0.657302)[&index=16,posterior=1.000000,ccp=0.977568,height_95%_HPD={nan,0.747736}]:0.605142)[&index=17,posterior=0.470294,ccp=0.598758,height_95%_HPD={nan,0.22011}]:0.112104,CorA_Pantoea_ananatis[&index=4,posterior=1.000000,ccp=0.598758]:0.905837)[&index=18,posterior=0.446974,ccp=0.446974,height_95%_HPD={nan,0.256669}]:0.151875,MRS2[&index=3,posterior=1.000000,ccp=0.446974]:0.951171)[&index=19,posterior=1.000000,ccp=1.000000,height_95%_HPD={nan,0.742932}]:0.633973,TRPM7[&index=2,posterior=1.000000,ccp=1.000000]:0.156041)[&index=20,posterior=1.000000,ccp=1.000000,height_95%_HPD={nan,0.480197}]:0.438290,TRPM6[&index=1,posterior=1.000000,ccp=1.000000]:0.002577,TRPM6_X12[&index=0,posterior=1.000000,ccp=1.000000]:0.003295)[&index=21,posterior=1.000000,ccp=1.000000,height_95%_HPD={nan,0}]:0.000000;
+End;
