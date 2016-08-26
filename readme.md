@@ -70,11 +70,9 @@ ALR1|Mg2+, also Ni2+, Mn2+, Zn2+, Co2+|human|2|2|5|10|homomer|2|1
 
 I converted the simplified Excel table to "Windows Formatted Text", a .txt file that preserved the line breaks and is readable for the user and the machine. I wrote a [sed](tablecommandsforshell.txt) command to convert the word variables to integral values for Raxml parsimony analysis. However, Raxml does not accept multiple character states to occur simultaneously in the same locus. It was therefore simpler to manually change the loci with multiple simultaneous character states (ion name, ion charge) to multiple binary loci.
 
-Raxml allows for 32 character states with  
+Raxml allows for 32 character states in its multistate model with with double-digit numbers represented by letters. Since Raxml also requires that that the multistate characters must be used in "the order in which they are available," I created a new ion channel called FAKE consisting of the consecutive missing characters and later pruned FAKE from the output besttree file. Raxml also does not allow for identical sequences so the two MgtE and TRPM6 channels were consolidated. I ran two Raxml analyses, one with an [unordered multistate model](raxml_morph_unordered.sh) and one with an [ordered multistate model](raxml_multistateordered.sh) using the [The Excelis Lab code.](http://sco.h-its.org/exelixis/web/software/raxml/hands_on.html)
 
-
-
-The tools I used were... See analysis files at (links to analysis files).
+All of the output trees were analyzed in FigTree and the logs were examined in Tracer.
 
 ## Results
 All of the trees are displayed with the raw branch length as node labels.
@@ -103,8 +101,6 @@ MRS2, a human mitocondrial magnesium transporter is closely related to CorA, a b
 
 The biggest difficulty in implementing these analyses was...
 A major difficulty in completing the project was my limited understanding of programming. In my project, I sought to do what I thought of as an interesting application of phylogentics and the topics we have discussed without thinking too much about feasibility of the computer model or my own limited proficiency in the area. This manifested itself in several challenges in implementing the programming aspect of the project. The project took me much longer than expected to complete. I ran into several hiccups in terms of syntax and execution. For example, there seemed to be a problem with loading my .nex file into the RevBayes program. I initially thought there was a syntax error in the command to input the discrete character data or that it had not been properly formatted for protein data. It turned out that the .nex file converted in Mesquite was noncompatable with RevBayes. By using an online .fasta to .nex conversion [tool](http://sequenceconversion.bugaco.com/converter/biology/sequences/fasta_to_nexus.php) instead, I was able to create a compatable .nex file.
-
-
 
 Another complication was that OSCAR couldn't process my analyses, requiring me to use my laptop computer instead. When I initially tried to run the JTT model analysis on OSCAR, the system initiated an error message that the program took up too much computing power. I subsequently reduced the number of iterations, which allowed the program to fully load and begin running, but the program paused midway through the run with the same error message. I therfore ran the program on my own machine, which ran slowly but with no error messages.
 
